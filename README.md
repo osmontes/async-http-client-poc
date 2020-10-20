@@ -10,4 +10,5 @@ Async-http-client 2.2.0
 Existen unos tests de JUnit que prueban las distintas llamadas de tipo get desarrolladas.
 
 Para las llamads síncroncas se utiliza *SyncCall.java* y para llamadas asíncronas tenemos *ASyncCall.java*.
+
 Código basado en el tutorial: https://www.baeldung.com/async-http-client 
