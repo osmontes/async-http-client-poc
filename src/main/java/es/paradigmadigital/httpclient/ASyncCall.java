@@ -14,6 +14,8 @@ import java.io.IOException;
  * Llamadas asíncronas de tipo GET
  *
  * Se añade una llamada a sleep para dar tiempo a completarse la ejecución.
+ * Podemos elegir entre utilizar el request con el API Bound o el Unbound, con los
+ * dos obtenemos lo mismo, solo son distintas formas de obtener el Response
  */
 @Slf4j
 public class ASyncCall {
@@ -32,8 +34,8 @@ public class ASyncCall {
         goToSleepPlease();
     }
 
-    public static void getWithUnBound(String url) throws IOException {
-        Request unBoundRequest = HttpClient.getUnBoundRequest(url);
+    public static void getWithUnbound(String url) throws IOException {
+        Request unBoundRequest = HttpClient.getUnbound(url);
         AsyncHttpClient client = HttpClient.getClient();
         client.executeRequest(unBoundRequest, new AsyncCompletionHandler<Object>() {
             @Override

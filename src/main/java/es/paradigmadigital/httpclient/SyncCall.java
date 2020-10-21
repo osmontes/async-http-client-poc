@@ -10,6 +10,8 @@ import java.util.concurrent.Future;
 
 /**
  * Llamadas síncronas de tipo GET
+ * Podemos elegir entre utilizar el request con el API Bound o el Unbound, con los
+ * dos obtenemos lo mismo, solo son distintas formas de obtener el Response
  */
 @Slf4j
 public class SyncCall {
@@ -21,8 +23,8 @@ public class SyncCall {
         return responseFuture.get();
     }
 
-    public static Response getWithUnBoundResponse(String url) throws ExecutionException, InterruptedException {
-        Future<Response> responseFuture = HttpClient.getClient().executeRequest(HttpClient.getUnBoundRequest(url));
+    public static Response getWithUnboundResponse(String url) throws ExecutionException, InterruptedException {
+        Future<Response> responseFuture = HttpClient.getClient().executeRequest(HttpClient.getUnbound(url));
         Response response = responseFuture.get();
         printLogs(response);
         return response;

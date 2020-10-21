@@ -19,8 +19,8 @@ class SyncCallTest {
     }
 
     @Test
-    public void getUnBoundTest() throws ExecutionException, InterruptedException {
-        Response response = SyncCall.getWithUnBoundResponse("http://www.google.es");
+    public void getUnboundTest() throws ExecutionException, InterruptedException {
+        Response response = SyncCall.getWithUnboundResponse("http://www.google.es");
         assertNotNull(response);
         assertEquals(200, response.getStatusCode());
     }

@@ -15,8 +15,8 @@ class ASyncCallTest {
     }
 
     @Test
-    public void getWithUnBoundTest() throws IOException {
-        ASyncCall.getWithUnBound("http://www.google.es");
+    public void getWithUnboundTest() throws IOException {
+        ASyncCall.getWithUnbound("http://www.google.es");
     }
 
 }
